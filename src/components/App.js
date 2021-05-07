@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from './Header';
 import Options from './menu/Options';
 import Footer from './Footer';
@@ -10,10 +11,17 @@ import dessertData from './dessertData';
 
 export default function App() {
 
+
+    // const [food, setFood] = React.useState(false);
+    // const [drink, setDrink] = React.useState(false);
+    // const [dessert, setDessert] = React.useState(false);
+    // const [state, setState] = React.useState("");
+
     const orderReviewData = reviewData();
     const foodMenuData = foodData();
     const drinkMenuData = drinkData();
     const dessertMenuData = dessertData();
+
 
     const newData = orderReviewData.map((item) => (
         <Review 
@@ -25,6 +33,9 @@ export default function App() {
 
     const foodOptions = foodMenuData.map((item) => (
             <Options 
+                option = {item.option}
+                // state = {isSelected ? "selected" : ""}
+                // func = {chosenOption}
                 imageURL = {item.imageURL}
                 imageAlt = {item.imageAlt}
                 name = {item.name}
@@ -37,6 +48,9 @@ export default function App() {
 
     const drinkOptions = drinkMenuData.map((item) => (
             <Options 
+                option = {item.option}
+                // state = {isSelected ? "selected" : ""}
+                // func = {chosenOption}
                 imageURL = {item.imageURL}
                 imageAlt = {item.imageAlt}
                 name = {item.name}
@@ -49,6 +63,9 @@ export default function App() {
 
     const dessertOptions = dessertMenuData.map((item) => (
             <Options 
+                option = {item.option}
+                // state = {isSelected ? "selected" : ""}
+                // func = {chosenOption}
                 imageURL = {item.imageURL}
                 imageAlt = {item.imageAlt}
                 name = {item.name}
@@ -58,6 +75,12 @@ export default function App() {
             />   
         )
     );
+    
+    // function chosenOption() {
+    //     console.log("estou funcionando");
+    //     isSelected ? setIsSelected(false) : setIsSelected(true);
+             
+    // }
 
     return (
         <>
