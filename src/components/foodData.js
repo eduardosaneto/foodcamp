@@ -6,8 +6,7 @@ export default function foodData() {
             imageAlt: "Estrogonofe de Frango",
             name: "Estrogonofe",
             description: "Frango com molho",
-            price: "20,00",
-            // quantity: 1
+            price: "20.00"
         },
         {
             option: "option2",
@@ -15,8 +14,7 @@ export default function foodData() {
             imageAlt: "Estrogonofe de Frango",
             name: "Estrogonofe",
             description: "Frango com molho",
-            price: "20,00",
-            // quantity: 1
+            price: "20.00"
         },
         {
             option: "option3",
@@ -24,8 +22,7 @@ export default function foodData() {
             imageAlt: "Estrogonofe de Frango",
             name: "Estrogonofe",
             description: "Frango com molho",
-            price: "20,00",
-            // quantity: 1
+            price: "20.00"
         }
     ]
 

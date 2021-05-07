@@ -1,4 +1,5 @@
 export default function drinkData() {
+
     const drinkMenu = [
         {
             option: "option1",
@@ -6,8 +7,7 @@ export default function drinkData() {
             imageAlt: "Estrogonofe de Frango",
             name: "Estrogonofe",
             description: "Frango com molho",
-            price: "20,00",
-            // quantity: 1
+            price: "20.00",
         },
         {
             option: "option2",
@@ -15,8 +15,7 @@ export default function drinkData() {
             imageAlt: "Estrogonofe de Frango",
             name: "Estrogonofe",
             description: "Frango com molho",
-            price: "20,00",
-            // quantity: 1
+            price: "20.00",
         },
         {
             option: "option3",
@@ -24,8 +23,7 @@ export default function drinkData() {
             imageAlt: "Estrogonofe de Frango",
             name: "Estrogonofe",
             description: "Frango com molho",
-            price: "20,00",
-            // quantity: 1
+            price: "20.00",
         }
     ]
 
