@@ -4,11 +4,11 @@ export default function Options(props) {
 
     const [isSelected, setIsSelected] = React.useState(false);
     const [count, setCount] = React.useState(1);
-    const {option, imageURL, imageAlt, name, description, price} = props;
+    const {imageURL, imageAlt, name, description, price} = props;
     const {order, setOrder} = props;
 
     return (
-        <li className={`${option} ${isSelected ? "selected" : ""}`} onClick={chosenOption}>
+        <li className={`${isSelected ? "selected" : ""}`} onClick={chosenOption}>
             <img src={imageURL} alt={imageAlt}/>
             <h1 className="name">{name}</h1>
             <p className="description">{description}</p>
@@ -22,16 +22,6 @@ export default function Options(props) {
             </div>
         </li>
     );
-
-    // function chosenOption() {
-    //     isSelected ? setIsSelected(false) : setIsSelected(true);
-    //     if(isSelected){
-    //         unselectItem();
-    //         removefromOrder();
-    //     } else {
-    //         addToOrder();
-    //     }
-    // }
 
     function unselectItem() {
         setIsSelected(false);

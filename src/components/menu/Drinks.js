@@ -9,7 +9,6 @@ export default function Drinks(props) {
 
     const drinkOptions = drinkMenuData.map((item) => (
         <Options 
-            option = {item.option}
             imageURL = {item.imageURL}
             imageAlt = {item.imageAlt}
             name = {item.name}

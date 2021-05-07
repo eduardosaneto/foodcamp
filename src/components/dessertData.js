@@ -1,28 +1,32 @@
 export default function dessertData() {
     const dessertMenu = [
         {
-            option: "option1",
-            imageURL: "assets/imagens/comida/estrogonofefrango.jpg",
-            imageAlt: "Estrogonofe de Frango",
-            name: "Estrogonofe",
-            description: "Frango com molho",
-            price: "20.00"
+            imageURL: "assets/imagens/sobremesa/brownieluiz.JPG",
+            imageAlt: "Brownie do Luiz",
+            name: "Brownie do Luiz",
+            description: "1 unidade",
+            price: "4,50"
         },
         {
-            option: "option2",
-            imageURL: "assets/imagens/comida/estrogonofefrango.jpg",
-            imageAlt: "Estrogonofe de Frango",
-            name: "Estrogonofe",
-            description: "Frango com molho",
-            price: "20.00"
+            imageURL: "assets/imagens/sobremesa/pudim.jpg",
+            imageAlt: "Pudim de leite",
+            name: "Pudim de leite",
+            description: "1 fatia",
+            price: "6,90"
         },
         {
-            option: "option3",
-            imageURL: "assets/imagens/comida/estrogonofefrango.jpg",
-            imageAlt: "Estrogonofe de Frango",
-            name: "Estrogonofe",
-            description: "Frango com molho",
-            price: "20.00"
+            imageURL: "assets/imagens/sobremesa/tortaalema.jpg",
+            imageAlt: "Torta alemã",
+            name: "Torta alemã",
+            description: "1 fatia",
+            price: "7,90"
+        },
+        {
+            imageURL: "assets/imagens/sobremesa/tortabrigadeiro.jpg",
+            imageAlt: "Torta de brigadeiro",
+            name: "Torta de brigadeiro",
+            description: "1 fatia",
+            price: "6,90"
         }
     ]
 

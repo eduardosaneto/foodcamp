@@ -14,18 +14,20 @@ export default function App() {
     const[allDrinks, setAllDrinks] = React.useState([]);
     const[allDesserts, setAllDesserts] = React.useState([]);
 
-    let all = true;
+    console.log(allFoods);
+    console.log(allDrinks);
+    console.log(allDesserts);
+
+    let disabled = true;
     let active = "close-order";
-    // let disabled = false;
 
     if (
-        allFoods > 0 &&
-        allDrinks > 0 && 
-        allDesserts > 0
+        allFoods.length > 0 &&
+        allDrinks.length > 0 && 
+        allDesserts.length > 0
     ) {
         active = "close-order active";
-        // disabled = true;
-        all = false;
+        disabled = false;
     }
 
     const orderReviewData = reviewData();
@@ -48,7 +50,7 @@ export default function App() {
             </section>
             <Footer 
                 active = {active}
-                all = {all}
+                disabled = {disabled}
                 allFoods={allFoods}
                 allDrinks={allDrinks}
                 allDesserts={allDesserts}

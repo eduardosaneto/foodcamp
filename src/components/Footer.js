@@ -1,20 +1,16 @@
 
 import React from "react";
-// import { Link } from "react-router-dom";
 
 export default function Footer(props) {
 
     const { allFoods, allDrinks, allDesserts, active} = props
-    const activeButton = props.all;
-    console.log(activeButton);
+    const activeButton = props.disabled;
     
     return (
         <footer>
-            {/* <Link to={{pathname: "/confirmarpedido", allFoods, allDrinks, allDesserts }}> */}
-                <button disabled={activeButton} className={active} onClick={closeOrder}>
-                    {activeButton ? "Selecione os 3 itens para fechar o pedido" : "Fechar pedido"} 
-                </button>
-            {/* </Link> */}
+            <button disabled={activeButton} className={active} onClick={closeOrder}>
+                {activeButton ? "Selecione os 3 itens para fechar o pedido" : "Fechar pedido"} 
+            </button>
         </footer>
     );
 
@@ -27,14 +23,22 @@ export default function Footer(props) {
         let totalDessertPrice = 0;
         let totalPrice = 0;  
     
-        const newFoodPrice = allFoods.map((item) => ((parseFloat(item.price.replace(",",".")))*item.quantity)); 
+        const newFoodPrice = allFoods.map((item) => (
+            (parseFloat(item.price.replace(",",".")))*item.quantity
+            )
+        ); 
         newFoodPrice.forEach((itemPrice) => {totalFoodPrice += itemPrice})
-        console.log(totalFoodPrice)
-    
-        const newDrinkPrice = allDrinks.map((item) => ((parseFloat(item.price.replace(",",".")))*item.quantity)); 
+            
+        const newDrinkPrice = allDrinks.map((item) => (
+            (parseFloat(item.price.replace(",",".")))*item.quantity
+            )
+        ); 
         newDrinkPrice.forEach((itemPrice) => {totalDrinkPrice += itemPrice})
     
-        const newDessertPrice = allDesserts.map((item) => ((parseFloat(item.price.replace(",",".")))*item.quantity)); 
+        const newDessertPrice = allDesserts.map((item) => (
+            (parseFloat(item.price.replace(",",".")))*item.quantity
+            )
+        ); 
         newDessertPrice.forEach((itemPrice) => {totalDessertPrice += itemPrice})
     
         totalPrice = (totalFoodPrice + totalDrinkPrice + totalDessertPrice).toFixed(2); 
@@ -46,9 +50,13 @@ export default function Footer(props) {
         allDesserts.forEach((item) => {desserts += item.name + " (" + item.quantity + "x), "})
     
         window.location.href =
-          "https://wa.me/?text=" +
+          "https://wa.me/5521999789570/?text=" +
           encodeURIComponent(
-            `Olá, gostaria de fazer o pedido: - Prato(s): ${foods} - Bebida(s): ${drinks} - Sobremesa(s): ${desserts} Total: R$ ${totalPrice}`
+            `Olá, gostaria de fazer o pedido: 
+            - Prato(s): ${foods} 
+            - Bebida(s): ${drinks} 
+            - Sobremesa(s): ${desserts} 
+            Total: R$ ${totalPrice}`
           );
       }
 }
