@@ -4,7 +4,7 @@ export default function Header(props) {
 
     return (
         <footer>
-            <button disabled={disabled} class={active}>
+            <button disabled={disabled} className={active}>
                 {text}
             </button>
         </footer>

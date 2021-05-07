@@ -3,33 +3,19 @@ import Options from './menu/Options';
 import Footer from './Footer';
 import Review from './review/Review';
 import ConfirmCancel from './review/ConfirmCancel';
+import reviewData from './reviewData';
+import foodData from './foodData';
+import drinkData from './drinkData';
+import dessertData from './dessertData';
 
 export default function App() {
 
-    const reviewData = [
-        {
-            step: "comida",
-            stepName: "frango",
-            stepPrice: "R$20,00",
-        },
-        {
-            step: "comida",
-            stepName: "frango",
-            stepPrice: "R$20,00",
-        },
-        {
-            step: "comida",
-            stepName: "frango",
-            stepPrice: "R$20,00",
-        },
-        {
-            step: "total",
-            stepName: "Total",
-            stepPrice: "R$20,00",
-        }
-    ]
+    const orderReviewData = reviewData();
+    const foodMenuData = foodData();
+    const drinkMenuData = drinkData();
+    const dessertMenuData = dessertData();
 
-    const newData = reviewData.map((item) => (
+    const newData = orderReviewData.map((item) => (
         <Review 
             reviewStep = {item.step}
             reviewStepName = {item.stepName}
@@ -37,34 +23,7 @@ export default function App() {
         />
     ));
 
-    const foodMenu = [
-        {
-            imageURL: "assets/imagens/comida/estrogonofefrango.jpg",
-            imageAlt: "Estrogonofe de Frango",
-            name: "Estrogonofe",
-            description: "Frango com molho",
-            price: "R$20,00",
-            quantity: 1
-        },
-        {
-            imageURL: "assets/imagens/comida/estrogonofefrango.jpg",
-            imageAlt: "Estrogonofe de Frango",
-            name: "Estrogonofe",
-            description: "Frango com molho",
-            price: "R$20,00",
-            quantity: 1
-        },
-        {
-            imageURL: "assets/imagens/comida/estrogonofefrango.jpg",
-            imageAlt: "Estrogonofe de Frango",
-            name: "Estrogonofe",
-            description: "Frango com molho",
-            price: "R$20,00",
-            quantity: 1
-        }
-    ]
-
-    const foodOptions = foodMenu.map((item) => (
+    const foodOptions = foodMenuData.map((item) => (
             <Options 
                 imageURL = {item.imageURL}
                 imageAlt = {item.imageAlt}
@@ -76,34 +35,7 @@ export default function App() {
         )
     );
 
-    const drinkMenu = [
-        {
-            imageURL: "assets/imagens/comida/estrogonofefrango.jpg",
-            imageAlt: "Estrogonofe de Frango",
-            name: "Estrogonofe",
-            description: "Frango com molho",
-            price: "R$20,00",
-            quantity: 1
-        },
-        {
-            imageURL: "assets/imagens/comida/estrogonofefrango.jpg",
-            imageAlt: "Estrogonofe de Frango",
-            name: "Estrogonofe",
-            description: "Frango com molho",
-            price: "R$20,00",
-            quantity: 1
-        },
-        {
-            imageURL: "assets/imagens/comida/estrogonofefrango.jpg",
-            imageAlt: "Estrogonofe de Frango",
-            name: "Estrogonofe",
-            description: "Frango com molho",
-            price: "R$20,00",
-            quantity: 1
-        }
-    ]
-
-    const drinkOptions = drinkMenu.map((item) => (
+    const drinkOptions = drinkMenuData.map((item) => (
             <Options 
                 imageURL = {item.imageURL}
                 imageAlt = {item.imageAlt}
@@ -115,34 +47,7 @@ export default function App() {
         )
     );
 
-    const dessertMenu = [
-        {
-            imageURL: "assets/imagens/comida/estrogonofefrango.jpg",
-            imageAlt: "Estrogonofe de Frango",
-            name: "Estrogonofe",
-            description: "Frango com molho",
-            price: "R$20,00",
-            quantity: 1
-        },
-        {
-            imageURL: "assets/imagens/comida/estrogonofefrango.jpg",
-            imageAlt: "Estrogonofe de Frango",
-            name: "Estrogonofe",
-            description: "Frango com molho",
-            price: "R$20,00",
-            quantity: 1
-        },
-        {
-            imageURL: "assets/imagens/comida/estrogonofefrango.jpg",
-            imageAlt: "Estrogonofe de Frango",
-            name: "Estrogonofe",
-            description: "Frango com molho",
-            price: "R$20,00",
-            quantity: 1
-        }
-    ]
-
-    const dessertOptions = dessertMenu.map((item) => (
+    const dessertOptions = dessertMenuData.map((item) => (
             <Options 
                 imageURL = {item.imageURL}
                 imageAlt = {item.imageAlt}
@@ -158,19 +63,19 @@ export default function App() {
         <>
             <Header />
             <section className="menu">
-                <div class="foods">
+                <div className="foods">
                     <span><h1>Primeiro, seu prato</h1></span>
                     <ul>
                         {foodOptions}
                     </ul>
                 </div>
-                <div class="drinks">
+                <div className="drinks">
                     <span><h1>Primeiro, seu prato</h1></span>
                     <ul>
                         {drinkOptions}
                     </ul>
                 </div>
-                <div class="desserts">
+                <div className="desserts">
                     <span><h1>Primeiro, seu prato</h1></span>
                     <ul>
                         {dessertOptions}
